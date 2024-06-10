@@ -22,7 +22,11 @@ body {
 main.cards {
     display: flex;
     padding: 32px;
+
+    animation: bounceInDown;
+    animation-duration: 1.5s;
 }
+
 
 main.cards section.card {
     display: flex;
@@ -47,6 +51,19 @@ main.cards section.card .icon {
 
 main.cards section.card img {
     width: 100%;
+    opacity: 0;
+    animation: button 1s 1s forwards,
+    rotateIn 2s 1s;
+}
+
+@keyframes button {
+    0% {
+        opacity: 0;
+    }
+    
+    100% {
+        opacity: 1;
+    }
 }
 
 main.cards section.card h3 {
@@ -72,6 +89,7 @@ main.cards section.card button {
     color: #fff;
     margin-bottom: 16px 0;
 }
+
 
 main.cards section.card.contact button {
     background: linear-gradient(to right, #9F66FF, #DFCBFF);
